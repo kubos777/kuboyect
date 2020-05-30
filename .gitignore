@@ -1,0 +1,7 @@
+*.pyc
+__ pycache __
+/static
+.DS_Store
+aws_data
+db.sqlite3
+
