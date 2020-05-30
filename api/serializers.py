@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from .models import Publication
 from django.contrib.auth.models import  User
 
 class UserSerializer(serializers.Serializer):
@@ -27,4 +28,11 @@ class UserSerializer(serializers.Serializer):
             return data
 
 
-        
+class PublicationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Publication
+        fields = (
+            'id',
+            'title',
+            'body'
+        )
